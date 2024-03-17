@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConnecFriend</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-page">
+            <div class="login-form">
+                <h2>Welcome to ConnecFriend</h2>
+                <input type="text" id="username" placeholder="Username">
+                <input type="password" id="password" placeholder="Password">
+                <button onclick="login()">Login</button>
+            </div>
+        </div>
+
+        <div class="home-page hidden">
+            <h2>ConnecFriend</h2>
+            <div id="news-feed">
+                <div class="news-item">
+                    <div class="friend-info">
+                        <img src="assets/210982.jpg" alt="Friend 1 Picture">
+                        <p>Friend 1</p>
+                    </div>
+                    <div class="news-content">
+                        <div class="options-toggle">
+                            <span class="dots" onclick="toggleOptionsMenu(event)">...</span>
+                        </div>
+                        <div class="options-menu hidden">
+                            <button onclick="addFriend()">Add Friend</button>
+                            <button onclick="sendMessage()">Message</button>
+                            <button onclick="ignorePerson()">Ignore This Person</button>
+                            <button onclick="hidePost()">Hide Post</button>
+                        </div>
+                        <p>My name is Huzaifa.</p>
+                        <p class="time">5 minutes ago</p>
+                        <div class="action-buttons">                         
+                            <button onclick="likePost()">👍<span id="likesCount">2</span></button>
+                            <button onclick="dislikePost()">👎<span id="dislikesCount">1</span></button><br><br>
+                            <button onclick="rateFriend(event)">Rate</button>
+                            <button onclick="shareNews()">Share</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="friend-info">
+                        <img src="assets/210982.jpg" alt="Friend 2 Picture">
+                        <p>Friend 2</p>
+                    </div>
+                    <div class="news-content">
+                        <div class="options-toggle">
+                            <span class="dots" onclick="toggleOptionsMenu(event)">...</span>
+                        </div>
+                        <div class="options-menu hidden">
+                            <button onclick="addFriend()">Add Friend</button>
+                            <button onclick="sendMessage()">Message</button>
+                            <button onclick="ignorePerson()">Ignore This Person</button>
+                            <button onclick="hidePost()">Hide Post</button>
+                        </div>
+                        <p>I am Friend 2.</p>
+                        <p class="time">1 hour ago</p>
+                        <div class="action-buttons">                         
+                            <button onclick="likePost()">👍<span id="likesCount">2</span></button>
+                            <button onclick="dislikePost()">👎<span id="dislikesCount">1</span></button><br><br>
+                            <button onclick="rateFriend(event)">Rate</button>
+                            <button onclick="shareNews()">Share</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="friend-info">
+                        <img src="assets/210982.jpg" alt="Friend 3 Picture">
+                        <p>Person 3</p>
+                    </div>
+                    <div class="news-content">
+                        <div class="options-toggle">
+                            <span class="dots" onclick="toggleOptionsMenu(event)">...</span>
+                        </div>
+                        <div class="options-menu hidden">
+                            <button onclick="addFriend()">Add Friend</button>
+                            <button onclick="sendMessage()">Message</button>
+                            <button onclick="ignorePerson()">Ignore This Person</button>
+                            <button onclick="hidePost()">Hide Post</button>
+                        </div>
+                        <p>Pakistan Zindabad.</p>
+                        <p class="time">1 day ago</p>
+                        <div class="action-buttons">                         
+                            <button onclick="likePost()">👍<span id="likesCount">2</span></button>
+                            <button onclick="dislikePost()">👎<span id="dislikesCount">1</span></button><br><br>
+                            <button onclick="rateFriend(event)">Rate</button>
+                            <button onclick="shareNews()">Share</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="profile-page hidden">
+            <div class="profile-header">
+                <h2>Profile</h2>
+                <button class="edit-profile-button" onclick="editProfile()">Edit Profile</button>
+            </div>
+            <div class="profile-info">
+                <img src="assets/210982.jpg" alt="Profile Picture" class="profile-picture">
+                <div class="profile-details">
+                    <p><strong>Name:</strong> Huzaifa Azhar</p>
+                    <p><strong>Age:</strong> 23</p>
+                    <p><strong>Location:</strong> Pakistan</p>
+                </div>
+            </div>
+            <div class="friends-section">
+                <h3>Friends</h3>
+                <div class="dummy-profile">
+                    <img src="assets/210982.jpg" alt="Friend Picture">
+                    <p>Friend 1</p><div style="width: 110px;"></div>
+                    <button onclick="sendMessage()">Message</button>
+                </div>
+                <div class="dummy-profile">
+                    <img src="assets/210982.jpg" alt="Friend Picture">
+                    <p>Friend 2</p><div style="width: 110px;"></div>
+                    <button onclick="sendMessage()">Message</button>
+                </div>
+                <div class="dummy-profile">
+                    <img src="assets/210982.jpg" alt="Friend Picture">
+                    <p>Friend 3</p><div style="width: 110px;"></div>
+                    <button onclick="sendMessage()">Message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
